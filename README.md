@@ -4,16 +4,16 @@ First project on GO
 //Запуск контейнера и проверка работоспособности, команды для терминала
 - Set-Location 'C:\Users\timof\.vscode\GO_programs\My_Projects\Rest_Api_From_Zero'
 - docker compose up -d postgres
-- 
+
 //Подтверждение запуска контейнера
 - docker exec tasks_postgres pg_isready -U taskuser -d tasksdb
-- 
+
 //Запуск приложения
 - go run ./cmd/api
-- 
+
 //Вывод таблицы
 - SELECT * FROM tasks;
-- 
+
 //Обновление записи
 - UPDATE tasks
 SET title = 'Написать REST API самостоятельно',
